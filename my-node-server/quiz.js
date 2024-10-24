@@ -10,13 +10,57 @@ const questions = [
     answers: { a: "Paris", b: "London", c: "Berlin", d: "Madrid" },
     correct: "a"
   },
- 
+  {
+    question: "What is the largest planet in our solar system?",
+    answers: { a: "Earth", b: "Mars", c: "Jupiter", d: "Saturn" },
+    correct: "c"
+  },
+  {
+    question: "What is the smallest prime number?",
+    answers: { a: "1", b: "2", c: "3", d: "5" },
+    correct: "b"
+  },
+  {
+    question: "Which element has the chemical symbol 'O'?",
+    answers: { a: "Oxygen", b: "Gold", c: "Osmium", d: "Silver" },
+    correct: "a"
+  },
+  {
+    question: "Who wrote 'Romeo and Juliet'?",
+    answers: { a: "Mark Twain", b: "Jane Austen", c: "William Shakespeare", d: "Charles Dickens" },
+    correct: "c"
+  },
+  {
+    question: "What is the capital of Japan?",
+    answers: { a: "Seoul", b: "Beijing", c: "Tokyo", d: "Bangkok" },
+    correct: "c"
+  },
+  {
+    question: "Which gas do plants absorb from the atmosphere?",
+    answers: { a: "Oxygen", b: "Nitrogen", c: "Carbon Dioxide", d: "Hydrogen" },
+    correct: "c"
+  },
+  {
+    question: "What is the largest ocean on Earth?",
+    answers: { a: "Atlantic Ocean", b: "Indian Ocean", c: "Arctic Ocean", d: "Pacific Ocean" },
+    correct: "d"
+  },
+  {
+    question: "What year did the Titanic sink?",
+    answers: { a: "1905", b: "1912", c: "1915", d: "1920" },
+    correct: "b"
+  },
+  {
+    question: "Which continent is known as the 'Dark Continent'?",
+    answers: { a: "Asia", b: "Africa", c: "Australia", d: "South America" },
+    correct: "b"
+  }
 ];
 
 let currentQuestion = 0;
 let score = 0;
-let totalQuizTime = 100; // in seconds
-let questionTimeLimit = 10; // in seconds
+let totalQuizTime = 100;
+let questionTimeLimit = 10;
 
 function askQuestion() {
   const { question, answers } = questions[currentQuestion];
@@ -63,7 +107,6 @@ function askQuestion() {
 function startQuiz() {
   console.log("Quiz started! You have 100 seconds to complete.");
   
-  // Overall quiz timer
   setTimeout(() => {
     console.log("Quiz time is up!");
     endQuiz();
